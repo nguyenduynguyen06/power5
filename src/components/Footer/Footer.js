@@ -14,7 +14,7 @@ const FooterMenu = () => {
         <footer className="footer-container">
           <div className="footer-left">
             <div className="footer-logo2">
-              <img src={'/logo.png'} alt="Logo" />
+              <img src={'./logo.png'} alt="Logo" />
             </div>
             <h4 className="footer-company-name">Power 5 Company Limited</h4>
             <div className="footer-contact">
