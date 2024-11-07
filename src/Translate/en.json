@@ -1,0 +1,45 @@
+    {
+        "navbar": {
+            "industries": "Industries",
+            "services": "Services",
+            "details": "Details",
+            "about": "About"
+        },
+        "submenu": {
+            "Information Technology": "Information Technology",
+            "Banking": "Banking",
+            "Education": "Education",
+            "Healthcare": "Healthcare",
+            "Consulting": "Consulting",
+            "Support": "Support",
+            "Development": "Development",
+            "Training": "Training",
+            "Overview": "Overview",
+            "Specifications": "Specifications",
+            "Pricing": "Pricing",
+            "Company": "Company",
+            "Team": "Team",
+            "Careers": "Careers",
+            "Contact": "Contact"
+        },
+        "content": {
+            "Information Technology": "Connected and Product Engineering solutions for the automotive industry.",
+            "Banking": "Retail and Investment Banking solutions.",
+            "Education": "Technology solutions for modern educational systems.",
+            "Healthcare": "Advanced technology solutions for the healthcare industry.",
+            "Consulting": "Professional consulting services for various industries.",
+            "Support": "Technical support to ensure your success.",
+            "Development": "Development services tailored to your business needs.",
+            "Training": "Training programs for skills and knowledge development.",
+            "Overview": "A high-level overview of our offerings and benefits.",
+            "Specifications": "Detailed specifications of our products and services.",
+            "Pricing": "Competitive pricing information for our offerings.",
+            "Company": "Learn more about our company's mission and values.",
+            "Team": "Meet the talented individuals behind our success.",
+            "Careers": "Explore career opportunities with us.",
+            "Contact": "Get in touch with our team for any inquiries."
+        },
+        "Home": {
+            "title": "Home | Power5"
+        }
+    }

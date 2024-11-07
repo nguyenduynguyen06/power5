@@ -1,0 +1,45 @@
+{
+  "navbar": {
+    "industries": "Ngành công nghiệp",
+    "services": "Dịch vụ",
+    "details": "Chi tiết",
+    "about": "Về chúng tôi"
+  },
+  "submenu": {
+    "Information Technology": "Công nghệ thông tin",
+    "Banking": "Ngân hàng",
+    "Education": "Giáo dục",
+    "Healthcare": "Y tế",
+    "Consulting": "Tư vấn",
+    "Support": "Hỗ trợ",
+    "Development": "Phát triển",
+    "Training": "Đào tạo",
+    "Overview": "Tổng quan",
+    "Specifications": "Thông số kỹ thuật",
+    "Pricing": "Bảng giá",
+    "Company": "Công ty",
+    "Team": "Đội ngũ",
+    "Careers": "Nghề nghiệp",
+    "Contact": "Liên hệ"
+  },
+  "content": {
+    "Information Technology": "Giải pháp kỹ thuật kết nối và sản phẩm cho ngành công nghiệp ô tô.",
+    "Banking": "Giải pháp ngân hàng bán lẻ và đầu tư.",
+    "Education": "Giải pháp công nghệ cho hệ thống giáo dục hiện đại.",
+    "Healthcare": "Giải pháp công nghệ tiên tiến cho ngành y tế.",
+    "Consulting": "Dịch vụ tư vấn chuyên nghiệp cho nhiều ngành công nghiệp.",
+    "Support": "Hỗ trợ kỹ thuật để đảm bảo thành công của bạn.",
+    "Development": "Dịch vụ phát triển phù hợp với nhu cầu kinh doanh của bạn.",
+    "Training": "Chương trình đào tạo phát triển kỹ năng và kiến thức.",
+    "Overview": "Tổng quan về các sản phẩm và lợi ích của chúng tôi.",
+    "Specifications": "Thông số chi tiết của sản phẩm và dịch vụ.",
+    "Pricing": "Thông tin giá cả cạnh tranh cho các sản phẩm của chúng tôi.",
+    "Company": "Tìm hiểu thêm về sứ mệnh và giá trị của công ty chúng tôi.",
+    "Team": "Gặp gỡ những cá nhân tài năng đằng sau thành công của chúng tôi.",
+    "Careers": "Khám phá cơ hội nghề nghiệp với chúng tôi.",
+    "Contact": "Liên hệ với đội ngũ của chúng tôi cho bất kỳ yêu cầu nào."
+  },
+  "Home": {
+    "title": "Trang chủ | Power5"
+  }
+}

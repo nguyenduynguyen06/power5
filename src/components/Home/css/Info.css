@@ -1,0 +1,53 @@
+.info-section {
+    font-family: Arial, sans-serif;
+    color: #0a0c5c;
+    width: 55%;
+    margin: 0 auto; /* Center the section */
+    padding: 20px 0; /* Minimal padding */
+}
+
+.info-section p {
+    font-size: 1.5em;
+    line-height: 1.4;
+    color: #0a0c5c; /* Dark blue */
+    word-wrap: break-word; /* Ensures long words wrap to the next line */
+}
+
+.highlight {
+    color: #0071c5; /* Light blue color for highlighted words */
+    font-weight: bold;
+}
+
+/* Styles for screens between 1280px and 1440px */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .info-section {
+        width: 79%; /* Slightly increased width */
+        padding: 15px 0; /* Adjust padding */
+    }
+
+    .info-section p {
+        font-size: 1.3em; /* Slightly reduce font size */
+        line-height: 1.5;
+    }
+
+    .highlight {
+        color: #0056b3; /* Slightly darker blue for this screen range */
+    }
+}
+
+/* Styles for screens smaller than 1279px */
+@media (max-width: 1279px) {
+    .info-section {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 10px 40px;
+    }
+
+    .info-section p {
+        font-size: 1.1em; /* Further reduce font size */
+        line-height: 1.4;
+    }
+
+    .highlight {
+        color: #004080; /* Even darker blue for better readability */
+    }
+}

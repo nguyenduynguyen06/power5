@@ -1,0 +1,403 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.landing-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #0a0c5c;
+    /* Dark blue background */
+    padding: 0 450px;
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow if needed */
+    padding-right: 0;
+    min-height: 60vh;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    transition: opacity 1s ease;
+    /* Smooth transition */
+}
+
+.top-navigation {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.left-section {
+    color: white;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    /* Offset to make content slide up */
+    transition: opacity 1s ease, transform 1s ease;
+    margin-right: 30px;
+}
+
+.left-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* Return to original position */
+}
+
+.left-section h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.left-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #00fff0, #005c99);
+    /* Blue gradient button */
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0c5c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button i {
+    margin-left: 10px;
+}
+
+.right-section {
+    max-width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.right-section img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio */
+    opacity: 0;
+    transition: opacity 1s ease;
+    /* Fade-in effect */
+}
+
+.right-section img.show {
+    opacity: 1;
+}
+
+.right-section img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    transform: scale(0.95);
+    box-shadow: none;
+    transition: opacity 1s ease, transform 1s ease, box-shadow 1s ease;
+    /* Smooth transition */
+}
+
+.right-section img.fade-in {
+    opacity: 1;
+    /* Full opacity when content is visible */
+    transform: scale(1);
+    /* Scale to full size */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    /* Add a shadow */
+}
+
+.right-section img.fade-out {
+    opacity: 0.2;
+    /* Reduced opacity when content is not visible */
+    transform: scale(0.95);
+    /* Scale down slightly */
+    box-shadow: none;
+    /* Remove shadow */
+}
+
+
+
+.bottom-navigation ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 30px; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    gap: 20px; /* Space between navigation items */
+}
+
+.bottom-navigation li {
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    padding: 0; /* Remove padding */
+}
+
+
+.bottom-navigation li::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.bottom-navigation li:hover::after {
+    width: 100%;
+}
+
+.bottom-navigation li:hover {
+    color: #00e5d0;
+    /* Light blue color on hover */
+}
+
+.bottom-navigation li.active {
+    color: #00e5d0;
+
+}
+
+.bottom-navigation li.active::after,
+.bottom-navigation li:hover::after {
+    width: 100%;
+}
+
+.description-banner {
+    font-size: 30px;
+    max-width: 1070px;
+    padding: 50px;
+    color: black;
+    background-color: #ffffff;
+}
+
+.animated-chevron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.chevron {
+    width: 16px;
+    height: 16px;
+    border-bottom: 3px solid #ffffff;
+    /* White color for visibility */
+    border-right: 3px solid #ffffff;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: chevronDrip 1.5s infinite ease-in-out;
+
+}
+
+
+.chevron:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.chevron:nth-child(2) {
+    animation-delay: 1s;
+
+}
+
+
+@keyframes chevronDrip {
+    0% {
+        transform: translateY(-10px) rotate(45deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(0px) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(10px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Styles for screens with a width of 1279px or less */
+@media (max-width: 1279px) {
+    .landing-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-section,
+    .right-section {
+        max-width: 100%;
+        flex: none;
+        padding: 0 20px;
+    }
+
+    .top-navigation {
+        max-width: 100%;
+        /* Expand to full width */
+    }
+
+    .left-section {
+        margin-right: 0;
+        /* Remove right margin for better centering */
+    }
+
+    .left-section h2 {
+        font-size: 3em;
+        /* Reduce the font size for better fit */
+    }
+
+    .left-section p {
+        font-size: 1em;
+        /* Slightly reduce font size */
+        margin-bottom: 20px;
+        /* Adjust spacing */
+    }
+
+    .cta-button {
+        font-size: 1.2em;
+        /* Smaller font size */
+        padding: 10px 20px;
+        /* Reduce padding */
+        margin: 10px auto;
+        /* Center button */
+    }
+
+    .right-section img {
+        max-height: 70vh;
+        /* Adjust image height */
+        max-width: 100%;
+        margin-top: 20px;
+        /* Add margin for spacing */
+    }
+
+    .bottom-navigation ul {
+        flex-direction: row;
+    }
+
+    .bottom-navigation li {
+        font-size: 1em;
+        /* Adjust font size */
+    }
+
+    .description-banner {
+        font-size: 1em;
+        /* Smaller font for description */
+        padding: 20px;
+        /* Reduce padding */
+        max-width: 100%;
+        /* Full width */
+        margin: 20px auto;
+    }
+
+    .animated-chevron {
+        gap: 1px;
+        /* Reduce space between chevrons */
+    }
+
+    .chevron {
+        width: 12px;
+        /* Smaller chevrons */
+        height: 12px;
+        border-bottom: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+    }
+}
+
+/* Styles for screens with a width between 1280px and 1440px */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .landing-container {
+        padding: 0 140px;
+        padding-right: 0;
+    }
+
+   
+    .right-section {
+        max-width: 50%;
+    }
+
+    .top-navigation {
+        max-width: 50%;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .left-section h2 {
+        font-size: 3.5em;
+        /* Adjusted font size for better readability */
+    }
+
+    .left-section p {
+        font-size: 1.1em;
+        /* Slightly smaller font size */
+        margin-bottom: 30px;
+        /* Reduced spacing */
+    }
+
+    .cta-button {
+        font-size: 1.3em;
+        /* Slightly smaller font */
+        padding: 12px 25px;
+        /* Adjust padding */
+    }
+
+    .right-section img {
+        max-width: 100%;
+        transition: opacity 1s ease, transform 1s ease, box-shadow 1s ease;
+    }
+
+    .right-section img.fade-in {
+        opacity: 1;
+        /* Full opacity when content is visible */
+        transform: scale(1);
+        /* Full scale on show */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .bottom-navigation ul {
+        padding-top: 15px;
+    }
+
+    .bottom-navigation li {
+        font-size: 1.1em;
+        /* Adjust font size */
+    }
+
+    .description-banner {
+        font-size: 1.1em;
+        /* Slightly smaller font */
+        padding: 30px;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .animated-chevron {
+        gap: 3px;
+        /* Slightly reduced gap for spacing */
+    }
+
+    .chevron {
+        width: 14px;
+        height: 14px;
+        border-bottom: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+    }
+}

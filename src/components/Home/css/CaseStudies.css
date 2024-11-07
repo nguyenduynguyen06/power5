@@ -1,0 +1,190 @@
+.case-studies {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.case-studies h2 {
+    font-size: 2.5em; /* Reduced font size for better responsiveness */
+    color: #0a0c5c;
+    margin-bottom: 10px;
+}
+
+.case-studies p {
+    font-size: 1.2em; /* Reduced font size */
+    color: #0a0c5c;
+    margin-bottom: 30px;
+}
+
+/* Set grid for 2x2 layout */
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Styles for screens between 1280px and 1440px */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .case-studies {
+        padding: 0 130px;
+    }
+
+    .case-studies h2 {
+        font-size: 2.2em; /* Adjusted font size */
+    }
+
+    .case-studies p {
+        font-size: 1.15em; /* Adjusted font size */
+    }
+
+    .case-study-card {
+        height: 380px; /* Adjusted card height */
+    }
+
+    .case-study-overlay {
+        height: 100px; /* Initial overlay height */
+    }
+
+    .title {
+        font-size: 1.4em; /* Increased font size for title */
+    }
+
+    .description {
+        font-size: 1em; /* Slightly smaller description font */
+    }
+}
+
+/* Responsive layout for screens smaller than 1279px */
+@media (max-width: 1279px) {
+    .case-studies {
+        padding: 0 20px; /* Adjusted padding */
+    }
+
+    .case-studies h2 {
+        font-size: 2em;
+    }
+
+    .case-studies p {
+        font-size: 1.1em; /* Adjust paragraph font size */
+    }
+
+    .case-study-overlay {
+        height: 120px; /* Adjust initial overlay height */
+    }
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .case-studies-grid {
+        grid-template-columns: 1fr; /* Stack items in one column */
+    }
+
+    .case-study-card {
+        height: 300px; /* Reduce card height */
+    }
+
+    .case-studies h2 {
+        font-size: 1.8em;
+    }
+
+    .case-studies p {
+        font-size: 1em;
+    }
+}
+
+.case-study-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Set a rectangular height for the cards */
+}
+
+.case-study-card:hover {
+    transform: scale(1.02);
+}
+
+.case-study-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.case-study-card:hover .case-study-image {
+    transform: scale(1.05);
+}
+
+.case-study-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(10, 12, 92, 0.8);
+    color: #fff;
+    transition: background 0.3s, height 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80px;
+    overflow: hidden;
+}
+
+.case-study-card:hover .case-study-overlay {
+    height: 90%;
+    padding: 20px;
+}
+
+.category {
+    font-size: 0.9em;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* Add underline effect */
+.category::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 200px; /* Adjusted for smaller screens */
+    height: 2px;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+.title {
+    font-size: 1.3em;
+    color: #00e5d0;
+    display: flex;
+    align-items: center;
+}
+
+/* Reduced font size for the title on smaller screens */
+@media (max-width: 1279px) {
+    .title {
+        font-size: 1.2em;
+    }
+}
+
+.title span {
+    margin-left: 5px;
+}
+
+.description {
+    font-size: 1em; /* Adjusted font size */
+    margin-top: 10px;
+    color: #fff;
+    opacity: 0;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.case-study-card:hover .description {
+    opacity: 0.8;
+}

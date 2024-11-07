@@ -1,0 +1,59 @@
+.promo-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+  
+  .promo-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .promo-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(10, 12, 92, 0.8); /* Semi-transparent dark blue */
+    padding: 20px;
+    max-width: 1017px;
+    text-align: left;
+    color: #fff;
+  }
+  
+  .promo-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00e5d0; /* Lighter blue for the title */
+  }
+  
+  .promo-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .promo-link {
+    font-size: 1.2em;
+    color: #00e5d0; /* Light blue for link */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .promo-link span {
+    margin-left: 5px;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+  }
+  
+  .promo-link:hover span {
+    transform: translateX(5px); /* Slight right movement on hover */
+  }
+  

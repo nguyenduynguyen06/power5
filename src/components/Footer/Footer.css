@@ -1,0 +1,252 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 55px 320px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Fully stack the footer on small screens (below 768px) */
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .footer-container {
+        padding: 40px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        flex: 1 1 45%; /* Allows two items per row */
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .footer-company-name {
+        font-size: 20px;
+    }
+
+    .footer-title h2,
+    .footer-column h4 {
+        font-size: 16px;
+    }
+
+    .footer-column {
+        align-items: flex-start;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .contact-item span {
+        font-size: 14px;
+    }
+}
+
+/* Shared styles for all screen sizes */
+.footer-left {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-company-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.footer-logo2 {
+    position: relative;
+    max-width: 350px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.footer-logo2 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+
+
+.footer-title h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #000000;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item svg {
+    color: #000000;
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.contact-item span {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+/* Middle section styling */
+.footer-middle {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+}
+
+.footer-column h4::after {
+    content: "";
+    width: 100%;
+    height: 2.5px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-link {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.footer-link:hover {
+    color: #EC652B;
+}
+
+/* Right section styling */
+.footer-right {
+    flex: 0 0 15.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-right .about,
+.footer-right .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        padding: 40px 10px;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .footer-middle {
+        display: block; 
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        align-items: flex-start; /* Align column items to the left */
+        width: 100%;
+    }
+
+    .footer-logo2 {
+        max-width: 250px;
+        margin: 20px 0; /* Remove auto centering and add space on top and bottom */
+    }
+
+    .footer-company-name {
+        font-size: 18px;
+    }
+
+    .footer-title h2,
+    .footer-column h4 {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        font-size: 13px;
+    }
+
+    .contact-item {
+        justify-content: flex-start; /* Align contact items to the left */
+    }
+
+    .contact-item span {
+        font-size: 13px;
+    }
+}
+
+
+
+/* Responsive layout for screens between 768px and 1279px */
+/* Responsive layout for screens between 1280px and 1440px */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .footer-container {
+        padding: 55px 100px;
+    }
+    .footer-company-name {
+        font-size: 22px;
+    }
+    .footer-title h2,
+    .footer-column h4 {
+        font-size: 18px;
+    }
+    .footer-link {
+        font-size: 15px;
+    }
+    .contact-item span {
+        font-size: 16px;
+    }
+}
